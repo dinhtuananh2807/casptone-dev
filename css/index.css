@@ -1,0 +1,72 @@
+.banner {
+    padding-bottom: 50px;
+    background-image: url("./../asset/img/image 6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .banner .banner-content {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .banner .banner-content .banner-info {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+  }
+  
+  .banner .banner-content .banner-info button {
+    background-color: #f8b653;
+    color: white;
+    border: none;
+    padding: 8px 30px;
+  }
+  .banner .menu-slider {
+    position: relative;
+    padding: 0 30px;
+  }
+  
+  .banner .menu-slider .slider .banner-content img {
+    max-width: 100%;
+  }
+  
+  .banner .menu-slider .slider .slider {
+    padding: 0 40px;
+  }
+  
+  .product-features {
+    padding-top: 50px;
+  }
+  
+  .banner .menu-slider .arrow-prev {
+    position: absolute;
+    padding: 3px 15px;
+    border-radius: 4px;
+    background: #DEDDDC;
+    top: 50%;
+    left: -50px;
+    cursor: pointer;
+  }
+  .banner .menu-slider .arrow-prev:hover {
+    background: #E1B067;
+  }
+  
+  .banner .menu-slider .arrow-prev .arrow i {
+    transform: rotate(-180deg);
+  }
+  .banner .menu-slider .arrow-next {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    padding: 3px 15px;
+    border-radius: 4px;
+    background: #DEDDDC;
+    cursor: pointer;
+  }
+  
+  .banner .menu-slider .arrow-next:hover {
+    background: #E1B067;
+  }
