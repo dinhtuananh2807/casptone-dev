@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Cart</title>
+    <title>Register</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -25,19 +25,11 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/register.css" />
   </head>
 
   <body>
+    <!-- header -->
     <header>
       <div class="header_content">
         <div class="logo">
@@ -50,14 +42,14 @@
           </div>
           <div class="login-register">
             <a href="#">Login</a>
-            <a href="#">Register</a>
+            <a href="./register.html">Register</a>
           </div>
         </div>
       </div>
 
       <nav>
         <ul>
-          <li class="active"><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+          <li class="active"><a href="./index.html">Home</a></li>
           <li><a href="#">Men</a></li>
           <li><a href="#">Woman</a></li>
           <li><a href="#">Kid</a></li>
@@ -65,101 +57,137 @@
         </ul>
       </nav>
     </header>
+    <!-- register -->
     <section class="register">
       <div class="container">
-        <h3 class="title">Register</h3>
-        <form id="formSubmit">
-          <div class="module-content">
-            <div class="mb-3 item">
-              <input
-                type="text"
-                class="form-control"
-                name=""
-                id="email"
-                aria-describedby="helpId"
-                placeholder="Email"
-              />
-              <span class="item-vali">(*)</span>
-              <p id="notiemail" class="text-danger py-2 mb-0"></p>
+        <h1 class="register_title">Register</h1>
+        <div class="register_content">
+          <form name="register_form" class="needs-validation">
+            <div class="row content justify-content-center g-2">
+              <div class="col-lg-5">
+                <div class="row">
+                  <div class="mt-3 field input-group" >
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                     required
+                    >
+                    <p id="result"></p>
+
+                  </div>
+                  
+                </div>
+                <div class="row">
+                  <div class="mt-3 field input-group" >
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      name=""
+                      id="password"
+                      class="form-control"
+                       required
+                    >
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mt-3 field input-group" >
+                    <label for="pass-confirm" class="form-label">Password Confirm</label>
+                    <input type="password" class="form-control" id="pass-confirm"  required>                  
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="row">
+                  <div class="mt-3 field input-group" >
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="name"
+                      class="form-control"
+                      placeholder=""
+                      aria-describedby="helpId" required
+                    >
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mt-3 field input-group" >
+                    <label for="phone" class="form-label">Phone</label>
+                    <input
+                      type="number"
+                      name=""
+                      id="phone"
+                      class="form-control"
+                      placeholder=""
+                      aria-describedby="helpId" required
+                    >
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mt-4 input-group">
+                    <label>Gender</label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                      />
+                      <label class="form-check-label" for="male"> Male </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                        checked
+                      />
+                      <label class="form-check-label" for="female">
+                        Female
+                      </label>
+                    </div>
+                  </div>
+                  <button
+                    name=""
+                    id="btnRegister"
+                    class="btn btn-primary mt-5"
+              type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
             </div>
             
-            <div class="mb-3 item">
-              <input
-                type="text"
-                class="form-control"
-                name=""
-                id="name"
-                aria-describedby="helpId"
-                placeholder="Name"
-              />
-              <span class="item-vali">(*)</span>
-              <p id="notiname" class="text-danger py-2 mb-0"></p>
-            </div>
-
-            <div class="mb-3 item">
-              <input
-                type="password"
-                class="form-control"
-                name=""
-                id="password"
-                aria-describedby="helpId"
-                placeholder="Password"
-              />
-              <span class="item-vali">(*)</span>
-              <p id="notipassword" class="text-danger py-2 mb-0"></p>
-            </div>
-
-            <div class="mb-3 item">
-              <input
-                type="password"
-                class="form-control"
-                name=""
-                id="password_confirm"
-                aria-describedby="helpId"
-                placeholder="Password confirm"
-              />
-              <span class="item-vali">(*)</span>
-              <p id="notipassword-confirm" class="text-danger py-2 mb-0"></p>
-            </div>
-
-            <div class="mb-3 item">
-              <input
-                type="text"
-                class="form-control"
-                name=""
-                id="phone"
-                aria-describedby="helpId"
-                placeholder="Phone"
-              />
-              <span class="item-vali">(*)</span>
-              <p id="notiphone" class="text-danger py-2 mb-0"></p>
-            </div>
-
-            <div class="checkbox-gender">
-              <p class="item-gender">Gender</p>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="trule"
-                  id=""
-                  checked
-                />
-                <label class="form-check-label" for=""> Male </label>
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" type="radio" value="false" id="" />
-                <label class="form-check-label" for=""> Female </label>
-              </div>
+          </form>
+        </div>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div
+            id="liveToast"
+            class="toast"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="toast-body d-flex justify-content-around align-items-center text-white">
+              <strong class="me-auto"></strong>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
             </div>
           </div>
-          <div class="item-btn">
-            <button class="btn" id="btnSubmit">SUBMIT</button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
+    <!-- footer -->
     <footer>
       <div class="info">
         <div class="container">
@@ -187,7 +215,7 @@
                 Create one account to manage everything you do wwith Nike,from
                 your shopping preferences to your Nike+ activity.
               </p>
-              <a href="#" class="link-feature">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -198,17 +226,17 @@
             <div class="email">
               <h3>EMAIL SIGNUP</h3>
               <p>Be the first to know about new products and special offers.</p>
-              <a href="#" class="link-feature">Sign up now</a>
+              <a href="#">Sign up now</a>
             </div>
             <div class="gift-cards">
               <h3>GIFT CARDS</h3>
               <p>Give the gift always fits</p>
-              <a href="#" class="link-feature">View cards</a>
+              <a href="#">View cards</a>
             </div>
             <div class="store">
               <h3>STORES NEAR YOU</h3>
               <p>Locate a Nike retail store or authorized retailer</p>
-              <a href="#" class="link-feature">Search</a>
+              <a href="#">Search</a>
             </div>
           </div>
         </div>
@@ -217,6 +245,8 @@
         © 2023 Cybersoft All Rights Reserved | Code by Thảo & Tuấn Anh.
       </div>
     </footer>
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -229,13 +259,9 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
-
-     <!-- Axios  -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="./admin/models/QLSP.js"></script>
-    <script src="./admin/models/validation/validation.js"></script>
-    <script src="./admin/models/index.js"></script>
-  
+    
+    <script src="https://unpkg.com/axios@1.4.0/dist/axios.min.js"></script>
+    <script src="./admin/models/Users.js"></script>
+    <script src="./admin/controllers/register.js"></script>
   </body>
 </html>

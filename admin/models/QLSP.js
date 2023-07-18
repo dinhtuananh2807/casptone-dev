@@ -46,7 +46,7 @@ function Cart() {
               <p>${product.shortDescription}</p>
             </div>
             <div class="product-info">
-              <button>Buy Now</button>
+              <button type="button" onclick="redirectPage(${product.id})">Buy Now</button>
               <p>${product.price}$</p>
             </div>
           </div>
@@ -55,6 +55,11 @@ function Cart() {
 
          document.getElementById('body-product').innerHTML = content;
    };
+
+   function redirectPage(id) {
+      window.location.href = `/detail.html?id=${id}`;
+  }
+  
 
    //Render sản phẩm theo danh mục sản phẩm có liên quan.
    this.renderProductRelated = function(category) {
